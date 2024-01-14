@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
-// import { Link } from "react-router-dom";
+
+import { ShoppingOutlined, InstagramOutlined } from "@ant-design/icons";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import "./layout.css";
@@ -49,12 +50,8 @@ export const Layout = ({ children }) => {
             className="carton_Icon_blok"
           >
             <Link to="/shoppingCart">
-              <img
-                src=".././src/assets/cart_img.png"
-                alt="shopping cart"
-                className="cartIcon"
-              ></img>
-              {totalItemsInCart > 0 && <span>({totalItemsInCart})</span>}
+              <ShoppingOutlined style={{ fontSize: "50px" }} />
+              <span>({totalItemsInCart})</span>
             </Link>
           </div>
         </div>
@@ -129,10 +126,7 @@ export const Layout = ({ children }) => {
         </div>
         <div className="logogo">
           <div>
-            <img
-              src=".././src/assets/logo_footer/instagram-social-outlined-logo.png"
-              alt="foto"
-            />
+          <InstagramOutlined />
           </div>
           <div>
             <img
