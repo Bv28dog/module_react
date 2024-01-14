@@ -1,0 +1,64 @@
+.btn_Remove_shopping_Cart {
+  background-color: rgb(206, 94, 94);
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+  color: white;
+  padding: 10px;
+}
+
+.btn_Remove_shopping_Cart:hover {
+  background-color: red;
+}
+
+.btn_Remove_shopping_Cart:active {
+  color: rgb(102, 70, 70);
+}
+
+.content_Cart_img {
+  width: 50%;
+  padding-bottom: 20px;
+}
+li {
+  list-style-type: none;
+}
+
+.content_Cart_Content {
+  width: 50%;
+}
+.li_content_Cart {
+  display: flex;
+  justify-content: space-around;
+}
+img {
+  width: 350px;
+}
+
+.empty_Cart {
+  color: rgb(137, 123, 19);
+  font-size: 50px;
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(187, 155, 76);
+}
+
+.qty {
+  font-weight: bold;
+}
+
+.divider {
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.btn_Increase {
+  margin-left: 15px;
+}
+
+.btn_Decrease {
+  margin-left: 10px;
+}
