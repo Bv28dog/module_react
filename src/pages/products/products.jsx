@@ -22,6 +22,7 @@ export const Products = () => {
   const categories = selectCategories();
   const loading = selectLoading();
   const [searchValue, setSearchValue] = useState("");
+  const [activeCategory, setActiveCategory] = useState("");
 
   useEffect(() => {
     dispatch(fetchProducts());
@@ -43,14 +44,29 @@ export const Products = () => {
     <div>
       <div className="catedoties_Products_Wrap">
         <p>CATEGORY :</p>
-        <div className="all_Categoy" onClick={() => dispatch(fetchProducts())}>
+        <div
+          className={`caregory ${
+            activeCategory === "all categories" || !activeCategory
+              ? "activeCategory"
+              : ""
+          }`}
+          onClick={() => {
+            dispatch(fetchProducts());
+            setActiveCategory("all categories");
+          }}
+        >
           All categories
         </div>
         {categories.map((category) => (
           <div
-            className="caregory"
+            className={`caregory ${
+              activeCategory === category ? "activeCategory" : ""
+            }`}
             key={category}
-            onClick={() => dispatch(fetchProducts(category))}
+            onClick={() => {
+              dispatch(fetchProducts(category));
+              setActiveCategory(category);
+            }}
           >
             {category}
           </div>
@@ -76,14 +92,13 @@ export const Products = () => {
                 <p className="price">Price: {product.price} $</p>
               </div>
             </Link>
-            <div className="addButtonWrap">
-              <Button
-                className="btn_Products_Add"
-                onClick={() => dispatch(addProduct(product))}
-              >
-                Add to cart
-              </Button>
-            </div>
+
+            <Button
+              className="btn_Products_Add"
+              onClick={() => dispatch(addProduct(product))}
+            >
+              Add to cart
+            </Button>
           </div>
         ))}
       </div>

@@ -74,38 +74,16 @@ a {
   font-weight: 900;
 }
 
-.all_Categoy {
-  font-size: 23px;
-  margin: 20px 0px 20px 0px;
-
-  background-color: rgb(212, 198, 181);
-  border-radius: 5px;
-  padding: 3px;
-}
-
-.all_Categoy:hover {
-  background-color: gray;
-  border-radius: 5px;
-  padding: 5px;
-}
-
-.all_Categoy:active {
-  color: white;
-}
 .caregory {
   font-size: 23px;
   margin: 20px 0px 20px 0px;
-
-  background-color: rgb(212, 198, 181);
-  border-radius: 5px;
-  padding: 3px;
+  &:hover {
+    border-bottom: 2px solid #000;
+  }
 }
-.caregory:hover {
-  background-color: gray;
-  border-radius: 5px;
-  padding: 5px;
+.activeCategory {
+  border-bottom: 2px solid #000;
 }
-
 .caregory:active {
   color: white;
 }

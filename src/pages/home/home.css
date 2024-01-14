@@ -1,7 +1,7 @@
 .color_Home {
   background-color: rgba(29, 44, 65, 0.863);
-  height: 88vh;
   background-image: url("../../assets/home_logout.png");
+  /* background-repeat: no-repeat; */
 
 }
 
