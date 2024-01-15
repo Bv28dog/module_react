@@ -3,4 +3,12 @@
   background-image: url("../../assets/home_logout.png");
   background-repeat: no-repeat;
   height: 617px;
+  background-size: contain; 
+}
+
+@media (max-width: 768px) {
+  .logo_Home {
+    background-size: cover; 
+    height: 300px; 
+  }
 }
