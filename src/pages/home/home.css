@@ -3,7 +3,7 @@
   background-image: url("../../assets/home_logout.png");
   background-repeat: no-repeat;
   height: 617px;
-  background-size: contain; 
+  background-size: cover; 
 }
 
 @media (max-width: 768px) {

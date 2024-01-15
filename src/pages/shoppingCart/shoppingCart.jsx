@@ -1,4 +1,5 @@
 import { Button } from "antd";
+import { Link } from "react-router-dom";
 import { useShoppingSelector } from "../../store/shoppingSlice";
 import { useDispatch } from "react-redux";
 import {
@@ -6,11 +7,13 @@ import {
   decreaseQty,
   increaseQty,
 } from "../../store/shoppingSlice";
+
 import "./shoppingCart.css";
 
 export const ShoppingCart = () => {
   const cartItems = useShoppingSelector();
   const dispatch = useDispatch();
+ 
 
   const handleDelete = (item) => {
     dispatch(deleteProduct(item));
@@ -24,10 +27,14 @@ export const ShoppingCart = () => {
           <ul>
             {cartItems.map((item) => (
               <li key={item.id}>
-                <div className="li_content_Cart">
+                <div  className="li_content_Cart">
+                 <div onClick={() => window.scrollTo(0,0)}>
+                 <Link to={`/productDetails/${item.id}`}>
                   <div>
                     <img src={item.image} alt="img" />
                   </div>
+                  </Link>
+                 </div>
                   <div className="content_Cart_img">
                     <p>Brand: {item.title}</p>
                     <div className="divider" />

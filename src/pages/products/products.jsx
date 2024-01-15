@@ -80,6 +80,7 @@ export const Products = () => {
       </div>
 
       <div className="productsWrap">
+        {/* {!filterdProducts.lenght  && <div><p style={{fontWeight:'800'}}>There is no such product!!!</p></div>} */}
         {filterdProducts.map((product) => (
           <div key={product.id}>
            <div onClick={() => window.scrollTo(0, 0)}>
