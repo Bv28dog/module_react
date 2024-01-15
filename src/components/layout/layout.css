@@ -60,31 +60,31 @@ a {
 .footer-container {
   margin-top: 2px;
   border-radius: 5px;
-  background-color: #cdcdcd;
+  background-color: #f7f7f7;
   color: black;
 }
 .about-blok {
   padding: 16px 20px 0 15px;
-  color: rgb(137, 123, 19);
+  color: black;
   font-size: 27px;
   text-align: center;
 }
 
 .about-blok p {
-  color: rgb(187, 155, 76);
+  color: black;
 }
 .container-contact-blok {
   padding: 5px 0px 0px 0px;
   text-align: center;
   font-size: 24px;
   font-weight: 600;
-  color: rgb(137, 123, 19);
+  color: black;
 }
 
 .contact-wrap {
   display: flex;
   justify-content: center;
-  color: rgb(187, 155, 76);
+  color: black;
   gap: 190px;
 }
 
@@ -123,6 +123,7 @@ a {
   margin-top: 22px;
   padding-left: 15px;
   margin-bottom: 20px;
+  font-size: 40px;
 }
 
 .logogo img {
@@ -133,15 +134,27 @@ a {
   justify-content: center;
   height: 50px;
   align-items: center;
-  background-color: #f0eeee;
+  background-color: #f7f7f7;
   border-radius: 5px;
 }
 .foot-text {
-  color: rgb(137, 123, 19);
+  color: black;
   font-weight: 700;
   font-size: 20px;
 }
 
-/* img {
-  width: 30px;
-} */
+@media (max-width: 768px) {
+  .carton_Icon_blok {
+    position: fixed;
+    right: 10px;
+    top: 88px;
+    width: 60px;
+}
+  .container-contact-blok {
+    font-size: 15px;
+  }
+
+  .contact-wrap {
+    gap: 0px;
+  }
+}

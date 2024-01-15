@@ -30,13 +30,14 @@ li {
 .li_content_Cart {
   display: flex;
   justify-content: space-around;
+  padding-bottom: 50px;
 }
 img {
   width: 350px;
 }
 
 .empty_Cart {
-  color: rgb(137, 123, 19);
+  color: black;
   font-size: 50px;
   text-align: center;
 }
@@ -44,7 +45,7 @@ img {
 h2 {
   text-align: center;
   font-size: 30px;
-  color: rgb(187, 155, 76);
+  color: black;
 }
 
 .qty {
@@ -61,4 +62,21 @@ h2 {
 
 .btn_Decrease {
   margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .carton_Icon_blok {
+    position: fixed;
+    right: 2px;
+    top: 88px;
+    width: 60px;
+}
+.li_content_Cart {
+  display: block;
+  justify-content: space-around;
+  padding-bottom: 50px;
+}
+img {
+  width: 300px;
+}
 }

@@ -1,6 +1,5 @@
 /* eslint-disable react/prop-types */
-
-import { ShoppingOutlined, InstagramOutlined } from "@ant-design/icons";
+import { ShoppingOutlined, InstagramOutlined ,FacebookOutlined,PhoneOutlined,EnvironmentOutlined,GooglePlusOutlined,TwitterOutlined, SendOutlined,MailOutlined} from "@ant-design/icons";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
 import "./layout.css";
@@ -39,12 +38,7 @@ export const Layout = ({ children }) => {
               Products
             </NavLink>
           </div>
-          {/* <div className="layoutLink_Blok3">
-            <NavLink to="/shoppingCart" activeClassName="layoutLinkColor">
-              Shopping Cart
-              {totalItemsInCart > 0 && <span>({totalItemsInCart})</span>}
-            </NavLink>
-          </div> */}
+         
           <div
             onClick={() => window.scrollTo(0, 0)}
             className="carton_Icon_blok"
@@ -76,10 +70,7 @@ export const Layout = ({ children }) => {
               <div className="blok-contact-item">
                 <div className="contact-item">
                   <div className="img-contact-logo">
-                    <img
-                      src=".././src/assets/logo_footer/placeholder.png"
-                      alt="foto"
-                    />
+                  <EnvironmentOutlined />
                   </div>
                   <div>
                     <span>5419 josepf Mountains</span>
@@ -89,10 +80,7 @@ export const Layout = ({ children }) => {
                 </div>
                 <div className="contact-item">
                   <div className="img-contact-logo">
-                    <img
-                      src=".././src/assets/logo_footer/phone-call.png"
-                      alt="foto"
-                    />
+                  <PhoneOutlined />
                   </div>
                   <div>
                     <span>+380 98 759 4589</span>
@@ -104,19 +92,13 @@ export const Layout = ({ children }) => {
               <div className="blok-contact-item">
                 <div className="contact-item">
                   <div className="img-contact-logo">
-                    <img
-                      src=".././src/assets/logo_footer/envelope.png"
-                      alt="foto"
-                    />
+                  <MailOutlined />
                   </div>
                   <span>shop_pay.info@gmail.com</span>
                 </div>
                 <div className="contact-item-planet">
                   <div className="img-contact-logo">
-                    <img
-                      src=".././src/assets/logo_footer/planet-earth.png"
-                      alt="foto"
-                    />
+                  <SendOutlined />
                   </div>
                   <span>www.shop_pay.com</span>
                 </div>
@@ -129,29 +111,15 @@ export const Layout = ({ children }) => {
           <InstagramOutlined />
           </div>
           <div>
-            <img
-              src=".././src/assets/logo_footer/twitter-social-outlined-logo.png"
-              alt="foto"
-            />
+          <TwitterOutlined />
           </div>
           <div>
-            <img
-              src=".././src/assets/logo_footer/facebook-logo-outline.png"
-              alt="foto"
-            />
+          <FacebookOutlined />
           </div>
           <div>
-            <img
-              src=".././src/assets/logo_footer/google-plus-outlined-logo-social-symbol.png"
-              alt="foto"
-            />
+          <GooglePlusOutlined />
           </div>
-          <div>
-            <img
-              src=".././src/assets/logo_footer/pinterest-outlined-logo.png"
-              alt="foto"
-            />
-          </div>
+         
         </div>
 
         <div className="foot-end">

@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import { ThreeDots } from "react-loader-spinner";
 import { Input, Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-
 import {
   fetchProducts,
   selectProducts,
@@ -55,7 +54,7 @@ export const Products = () => {
             setActiveCategory("all categories");
           }}
         >
-          All categories
+          all categories
         </div>
         {categories.map((category) => (
           <div
@@ -83,7 +82,8 @@ export const Products = () => {
       <div className="productsWrap">
         {filterdProducts.map((product) => (
           <div key={product.id}>
-            <Link to={`/productDetails/${product.id}`}>
+           <div onClick={() => window.scrollTo(0, 0)}>
+           <Link to={`/productDetails/${product.id}`}>
               <div className="product_Item">
                 <p className="productTitle"> {product.title}</p>
                 <div className="prouctImgWrap">
@@ -92,6 +92,7 @@ export const Products = () => {
                 <p className="price">Price: {product.price} $</p>
               </div>
             </Link>
+           </div>
 
             <Button
               className="btn_Products_Add"

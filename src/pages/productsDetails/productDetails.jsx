@@ -37,11 +37,11 @@ export const ProductDetails = () => {
           </p>
           <p>Description: {product.description}</p>
 
-          <p>Price: {product.price} $</p>
+          <p className="price_text">Price: {product.price} $</p>
           <hr />
           <hr />
 
-          <div className="divBtn">
+          <div onClick={() => window.scrollTo(0, 0)} className="divBtn">
             <Button onClick={handleAddToCart}>add to Cart</Button>
             <Link to="/shoppingCart">
               <Button type="primary">Show Cart</Button>
