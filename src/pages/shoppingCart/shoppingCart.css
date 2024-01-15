@@ -70,13 +70,13 @@ h2 {
     right: 2px;
     top: 88px;
     width: 60px;
-}
-.li_content_Cart {
-  display: block;
-  justify-content: space-around;
-  padding-bottom: 50px;
-}
-img {
-  width: 300px;
-}
+  }
+  .li_content_Cart {
+    display: block;
+    justify-content: space-around;
+    padding-bottom: 50px;
+  }
+  img {
+    width: 300px;
+  }
 }

@@ -146,10 +146,16 @@ a {
 @media (max-width: 768px) {
   .carton_Icon_blok {
     position: fixed;
-    right: 10px;
-    top: 88px;
+    right: 23px;
+    top: 95px;
     width: 60px;
-}
+  }
+  .catedoties_Products_Wrap {
+    gap: 31px;
+  }
+  .layoutLink {
+    gap: 50px;
+  }
   .container-contact-blok {
     font-size: 15px;
   }
