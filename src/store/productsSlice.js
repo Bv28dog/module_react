@@ -49,6 +49,7 @@ const initialState = {
   categories: [],
   selectedProduct: null,
   loading: false,
+  selectedProductLoading: false,
   error: null,
 };
 
@@ -83,15 +84,15 @@ const productSlice = createSlice({
         state.error = action.error.message;
       })
       .addCase(fetchProductById.pending, (state) => {
-        state.loading = true;
+        state.selectedProductLoading = true;
         state.error = null;
       })
       .addCase(fetchProductById.fulfilled, (state, action) => {
-        state.loading = false;
+        state.selectedProductLoading = false;
         state.selectedProduct = action.payload;
       })
       .addCase(fetchProductById.rejected, (state, action) => {
-        state.loading = false;
+        state.selectedProductLoading = false;
         state.error = action.error.message;
       });
   },
@@ -115,6 +116,11 @@ export const selectCategories = () =>
 export const selectLoading = () =>
   useSelector((state) => {
     return state.productsReducer.loading;
+  });
+
+export const selectProductLoading = () =>
+  useSelector((state) => {
+    return state.productsReducer.selectedProductLoading;
   });
 
 export default productSlice.reducer;

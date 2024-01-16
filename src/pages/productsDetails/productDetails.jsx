@@ -2,7 +2,8 @@ import { useDispatch } from "react-redux";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 import { Button } from "antd";
-import { fetchProductById, selectProduct } from "../../store/productsSlice";
+import { fetchProductById, selectProduct, selectProductLoading } from "../../store/productsSlice";
+import { ThreeDots } from "react-loader-spinner";
 import { addProduct } from "../../store/shoppingSlice";
 import { Link } from "react-router-dom";
 import "./productsDetails.css";
@@ -11,8 +12,9 @@ export const ProductDetails = () => {
   const dispatch = useDispatch();
   const product = selectProduct();
   const { id } = useParams();
+  const loading = selectProductLoading()
 
-  useEffect(() => {
+   useEffect(() => {
     dispatch(fetchProductById(id));
   }, [dispatch, id]);
 
@@ -21,8 +23,15 @@ export const ProductDetails = () => {
       dispatch(addProduct(product));
     }
   };
+  
+  if (loading ||!product) {
+    return (
+      <div className="loaderWrap">
+        <ThreeDots width={100} height={100} color="black" />
+      </div>
+    );
+  }
 
-  if (!product) return null;
 
   return (
     <>
