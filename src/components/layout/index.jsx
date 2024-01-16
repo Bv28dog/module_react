@@ -1,10 +1,20 @@
 /* eslint-disable react/prop-types */
-import { ShoppingOutlined, InstagramOutlined ,FacebookOutlined,PhoneOutlined,EnvironmentOutlined,GooglePlusOutlined,TwitterOutlined, SendOutlined,MailOutlined} from "@ant-design/icons";
+import {
+  ShoppingOutlined,
+  InstagramOutlined,
+  FacebookOutlined,
+  PhoneOutlined,
+  EnvironmentOutlined,
+  GooglePlusOutlined,
+  TwitterOutlined,
+  SendOutlined,
+  MailOutlined,
+} from "@ant-design/icons";
 import logo from "../../assets/logo.svg";
 import { Link } from "react-router-dom";
-import "./layout.css";
 import { NavLink } from "react-router-dom";
 import { selectCartItemsCount } from "../../store/shoppingSlice";
+import "./layout.css";
 
 export const Layout = ({ children }) => {
   const totalItemsInCart = selectCartItemsCount();
@@ -38,7 +48,7 @@ export const Layout = ({ children }) => {
               Products
             </NavLink>
           </div>
-         
+
           <div
             onClick={() => window.scrollTo(0, 0)}
             className="carton_Icon_blok"
@@ -70,7 +80,7 @@ export const Layout = ({ children }) => {
               <div className="blok-contact-item">
                 <div className="contact-item">
                   <div className="img-contact-logo">
-                  <EnvironmentOutlined />
+                    <EnvironmentOutlined />
                   </div>
                   <div>
                     <span>5419 josepf Mountains</span>
@@ -80,7 +90,7 @@ export const Layout = ({ children }) => {
                 </div>
                 <div className="contact-item">
                   <div className="img-contact-logo">
-                  <PhoneOutlined />
+                    <PhoneOutlined />
                   </div>
                   <div>
                     <span>+380 98 759 4589</span>
@@ -92,13 +102,13 @@ export const Layout = ({ children }) => {
               <div className="blok-contact-item">
                 <div className="contact-item">
                   <div className="img-contact-logo">
-                  <MailOutlined />
+                    <MailOutlined />
                   </div>
                   <span>shop_pay.info@gmail.com</span>
                 </div>
                 <div className="contact-item-planet">
                   <div className="img-contact-logo">
-                  <SendOutlined />
+                    <SendOutlined />
                   </div>
                   <span>www.shop_pay.com</span>
                 </div>
@@ -108,18 +118,17 @@ export const Layout = ({ children }) => {
         </div>
         <div className="logogo">
           <div>
-          <InstagramOutlined />
+            <InstagramOutlined />
           </div>
           <div>
-          <TwitterOutlined />
+            <TwitterOutlined />
           </div>
           <div>
-          <FacebookOutlined />
+            <FacebookOutlined />
           </div>
           <div>
-          <GooglePlusOutlined />
+            <GooglePlusOutlined />
           </div>
-         
         </div>
 
         <div className="foot-end">
