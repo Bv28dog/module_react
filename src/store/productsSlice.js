@@ -47,7 +47,7 @@ export const fetchProductById = createAsyncThunk(
 const initialState = {
   products: [],
   categories: [],
-  selectedProduct: null,
+  selectedProduct: {},
   loading: false,
   selectedProductLoading: false,
   error: null,

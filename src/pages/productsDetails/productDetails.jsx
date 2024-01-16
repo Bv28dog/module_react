@@ -24,7 +24,7 @@ export const ProductDetails = () => {
     }
   };
   
-  if (loading ||!product) {
+  if (loading) {
     return (
       <div className="loaderWrap">
         <ThreeDots width={100} height={100} color="black" />
